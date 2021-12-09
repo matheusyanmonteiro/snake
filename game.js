@@ -1,5 +1,5 @@
-import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from "./class/snake.js";
-import { update as updateFood, draw as drawFood } from "./class/food.js";
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from "./snake.js";
+import { update as updateFood, draw as drawFood } from "./food.js";
 
 
 let lastRenderTime = 0;
@@ -11,6 +11,7 @@ function main (currentTime) {
   if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
 
 
+  console.log("render")
   lastRenderTime = currentTime;
 
   update();
